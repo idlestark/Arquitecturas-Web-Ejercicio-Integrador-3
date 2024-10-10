@@ -7,25 +7,25 @@ public class EstudianteCarreraPK implements java.io.Serializable {
 
     private static final long serialVersionUID = -2173029278696333769L;
 
-    private int dni;
+    private Long dni;
 
-    private int idCarrera;
+    private Long idCarrera;
 
     public EstudianteCarreraPK() {
         super();
     }
 
-    public EstudianteCarreraPK(int dni, int idCarrera) {
+    public EstudianteCarreraPK(Long dni, Long idCarrera) {
         this.dni = dni;
         this.idCarrera = idCarrera;
     }
 
 
-    public int getDni() {
+    public Long getDni() {
         return dni;
     }
 
-    public int getIdCarrera() {
+    public Long getIdCarrera() {
         return idCarrera;
     }
 }

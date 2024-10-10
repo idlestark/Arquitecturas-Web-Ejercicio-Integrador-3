@@ -8,7 +8,7 @@ import java.util.List;
 public class Estudiante {
 
     @Id
-    private int dni;
+    private Long dni;
 
     @Column
     private String nombre;
@@ -34,7 +34,7 @@ public class Estudiante {
 
     public Estudiante() {super();}
 
-    public Estudiante(int dni, String nombre, String apellido, String genero, int edad, String ciudad, int lu) {
+    public Estudiante(Long dni, String nombre, String apellido, String genero, int edad, String ciudad, int lu) {
         super();
         this.dni = dni;
         this.nombre = nombre;
@@ -62,7 +62,7 @@ public class Estudiante {
         return genero;
     }
 
-    public int getDni() {
+    public long getDni() {
         return dni;
     }
 
@@ -74,6 +74,37 @@ public class Estudiante {
         return lu;
     }
 
+    public void setDni(long dni) {
+        this.dni = dni;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    public void setLu(int lu) {
+        this.lu = lu;
+    }
+
+    public void setCarreras(List<EstudianteCarrera> carreras) {
+        this.carreras = carreras;
+    }
 
     public List<EstudianteCarrera> getCarreras() {
         return carreras;

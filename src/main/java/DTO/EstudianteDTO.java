@@ -7,7 +7,7 @@ public class EstudianteDTO {
     private String apellido;
     private int edad;
     private String genero;
-    private int dni;
+    private Long dni;
     private String ciudad;
     private int lu;
 
@@ -16,7 +16,7 @@ public class EstudianteDTO {
         super();
     }
 
-    public EstudianteDTO(String nombre, String apellido, int edad, String genero, int dni, String ciudad, int lu) {
+    public EstudianteDTO(String nombre, String apellido, int edad, String genero, Long dni, String ciudad, int lu) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -60,11 +60,11 @@ public class EstudianteDTO {
         this.genero = genero;
     }
 
-    public int getDni() {
+    public Long getDni() {
         return dni;
     }
 
-    public void setDni(int dni) {
+    public void setDni(Long dni) {
         this.dni = dni;
     }
 
