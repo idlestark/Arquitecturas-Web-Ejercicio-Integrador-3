@@ -10,25 +10,43 @@ import java.util.Optional;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/estudiantes")
+@RequestMapping("/estudiante")
 public class EstudianteController {
 
     private final EstudianteService estudianteService;
 
-    //OBTENER TODOS LOS ESTUDIANTES
-    @GetMapping("/")
-    public Iterable<Estudiante> getEstudaintes(){
-        return estudianteService.getEstudiantes();
+    //OBTENER TODOS LOS ESTUDIANTES ORDENADOS POR SU APELLIDO (2.C)
+    @GetMapping
+    public ResponseEntity<List<EstudianteDTO>> getEstudiantes() {
+        List<EstudianteDTO> resultado = estudianteService.getEstudiantes();
+        return ResponseEntity.ok().body(resultado);
     }
 
+    //OBTENER TODOS LOS ESTUDIANTES POR GÉNERO (2.E)
+    @GetMapping("/genero/{genero}")
+    public Iterable<Estudiante> getEstudiantesPorGenero(@PathVariable String genero) { return estudianteService.getEstudiantesPorGenero(genero.toUpperCase()); }
+
+
+    //OBTENER TODOS LOS ESTUDIANTES INSCRIPTOS A UNA CARRERA (FILTRADO POR CIUDAD) (2.G)
+    @GetMapping("/{idCarrera}/{ciudad}")
+    public Iterable<Estudiante> getEstudiantesInscriptosEnCarrera(@PathVariable int idCarrera, @PathVariable String ciudad) { return estudianteService.getEstudiantesInscriptosEnCarrera(idCarrera, ciudad); }
+
+
     //OBTENER UN ESTUDIANTE POR ID
-    @GetMapping("/{id}")
+    @GetMapping("/{dni}")
     public ResponseEntity<Estudiante> getEstudianteByDni(@PathVariable Long dni) {
         Optional<Estudiante> resultado = estudianteService.getEstudianteByDni(dni);
         return resultado.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    //CREAR NUEVO ESTUDIANTE
+    //OBTENER ESTUDIANTE POR LU (2.D)
+    @GetMapping("/lu/{lu}")
+    public ResponseEntity<EstudianteDTO> getEstudianteByLU(@PathVariable Long lu) {
+        EstudianteDTO resultado = estudianteService.getEstudianteByLU(lu);
+        return ResponseEntity.ok(resultado);
+    }
+
+    //CREAR NUEVO ESTUDIANTE (2.A)
     @PostMapping
     public Estudiante addEstudiante(@RequestBody Estudiante nuevoEstudiante) { return estudianteService.addEstudiante(nuevoEstudiante); }
 
@@ -36,12 +54,6 @@ public class EstudianteController {
     @DeleteMapping("/{id}")
     public void deleteEstudiante(@PathVariable Long id) { estudianteService.deleteEstudiante(id); }
 
-    //OBTENER TODOS LOS ESTUDIANTES ORDENADOS POR SU APELLIDO
-    @GetMapping("/getEstudiantesApellido")
-    public ResponseEntity<List<EstudianteDTO>> getEstudiantesApellido() {
-        List<EstudianteDTO> resultado = estudianteService.getEstudiantesApellido();
-        return ResponseEntity.ok().body(resultado);
-    }
 
 
     /*

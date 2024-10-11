@@ -35,7 +35,8 @@ public class CarreraController {
     @DeleteMapping("/{id}")
     public void deleteCarrera(@PathVariable Long id) { carreraService.deleteCarrera(id); }
 
-    //OBTENER SOLO CARRERAS CON ESTUDIANTES INSCRIPTOS
+    //OBTENER SOLO CARRERAS CON ESTUDIANTES INSCRIPTOS (2.F)
+    @GetMapping("/conInscriptos")
     public ResponseEntity<List<CarreraDTO>> obtenerCarrerasConInscriptos() {
         List<CarreraDTO> resultado = carreraService.obtenerCarrerasConInscriptos();
         return ResponseEntity.ok(resultado);

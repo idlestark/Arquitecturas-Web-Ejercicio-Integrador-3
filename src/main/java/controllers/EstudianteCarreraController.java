@@ -15,23 +15,22 @@ import java.util.Optional;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/estudiante-carrera")
+@RequestMapping("/estudianteCarrera")
 public class EstudianteCarreraController {
 
     private final EstudianteCarreraService estudianteCarreraService;
     private final EstudianteService estudianteService;
     private final CarreraService carreraService;
 
-    public static class EstudianteCarreraRequest{
+    public static class EstudianteCarreraRequest {
         public Long estudianteDni;
         public Long carreraId;
         public Date fechaInscripcion;
-        public Date fechaGraduacion;
         public boolean estaGraduado;
     }
 
     @GetMapping
-    public List<EstudianteCarrera> getAllEstudianteCarrera(){
+    public List<EstudianteCarrera> getAllEstudianteCarrera() {
         return estudianteCarreraService.getAllEstudianteCarrera();
     }
 
@@ -42,8 +41,9 @@ public class EstudianteCarreraController {
         return estudianteCarrera.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    //MATRICULAR UN ESTUDIANTE A UNA CARRERA (2.B)
     @PostMapping
-    public ResponseEntity<EstudianteCarrera> createEstudianteCarrera(@RequestBody EstudianteCarreraRequest request) {
+    public ResponseEntity<EstudianteCarrera> matricularEstudiante(@RequestBody EstudianteCarreraRequest request) {
         //SE OBTIENE EL ESTUDIANTE POR SU DNI
         Optional<Estudiante> resultadoEstudiante = estudianteService.getEstudianteByDni(request.estudianteDni);
         if(!resultadoEstudiante.isPresent()) return ResponseEntity.badRequest().body(null);
