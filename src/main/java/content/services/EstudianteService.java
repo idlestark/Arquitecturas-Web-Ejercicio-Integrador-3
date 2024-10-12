@@ -1,10 +1,10 @@
-package services;
-import DTO.EstudianteDTO;
-import entities.Carrera;
+package content.services;
+import content.DTO.EstudianteDTO;
+import content.entities.Carrera;
 import entities.Estudiante;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import repositories.EstudianteRepository;
+import content.repositories.EstudianteRepository;
 import java.sql.Date;
 import java.util.List;
 import java.util.Optional;

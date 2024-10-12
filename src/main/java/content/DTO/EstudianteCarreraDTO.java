@@ -1,4 +1,4 @@
-package DTO;
+package content.DTO;
 
 public class EstudianteCarreraDTO {
 

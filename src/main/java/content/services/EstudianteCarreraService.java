@@ -1,10 +1,10 @@
-package services;
+package content.services;
 
-import DTO.EstudianteCarreraDTO;
+import content.DTO.EstudianteCarreraDTO;
 import entities.EstudianteCarrera;
 import entities.EstudianteCarreraPK;
 import org.springframework.transaction.annotation.Transactional;
-import repositories.EstudianteCarreraRepository;
+import content.repositories.EstudianteCarreraRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -38,7 +38,8 @@ public class EstudianteCarreraService {
     }
 
     @Transactional(readOnly = true)
-    public List<EstudianteCarreraDTO> generarReporteCarreras(){
-        return estudianteCarreraRepository.generarReporteCarrera();
+    public List<EstudianteCarreraDTO> generarReporte(){
+        return estudianteCarreraRepository.generarReporte();
     }
+
 }

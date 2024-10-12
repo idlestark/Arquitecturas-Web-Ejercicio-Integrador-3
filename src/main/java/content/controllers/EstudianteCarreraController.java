@@ -1,14 +1,12 @@
-package controllers;
-import DTO.EstudianteCarreraDTO;
-import entities.EstudianteCarrera;
+package content.controllers;
+import content.DTO.EstudianteCarreraDTO;
+import conteentities.EstudianteCarrera;
 import entities.EstudianteCarreraPK;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import entities.*;
-import services.CarreraService;
-import services.EstudianteCarreraService;
-import services.EstudianteService;
+import content.entities.*;
+import content.services.*;
 import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
@@ -68,16 +66,17 @@ public class EstudianteCarreraController {
         return ResponseEntity.ok(ec);
     }
 
+    //BORRAR UNA RELACIÓN ESTUDIANTE-CARRERA
     @DeleteMapping("/{estudianteId}/{carreraId}")
     public void deleteEstudianteCarrera(@PathVariable long estudianteId, @PathVariable Long carreraId){
         EstudianteCarreraPK pk = new EstudianteCarreraPK(estudianteId, carreraId);
         estudianteCarreraService.deleteEstudianteCarrera(pk);
     }
 
-    // Generar reporte de carreras (inscriptos y egresados por año)
-    @GetMapping("/reporte-carreras")
-    public ResponseEntity<List<EstudianteCarreraDTO>> generarReporteCarrera(){
-        List<EstudianteCarreraDTO> reporte = estudianteCarreraService.generarReporteCarreras();
+    //GENERAR REPORTE DE CARRERAS (2.H)
+    @GetMapping("/reporte")
+    public ResponseEntity<List<EstudianteCarreraDTO>> generarReporte() {
+        List<EstudianteCarreraDTO> reporte = estudianteCarreraService.generarReporte();
         return ResponseEntity.ok(reporte);
     }
 

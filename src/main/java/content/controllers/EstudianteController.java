@@ -1,10 +1,10 @@
-package controllers;
-import DTO.EstudianteDTO;
+package content.controllers;
+import content.DTO.EstudianteDTO;
 import entities.Estudiante;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import services.EstudianteService;
+import content.services.EstudianteService;
 import java.util.List;
 import java.util.Optional;
 

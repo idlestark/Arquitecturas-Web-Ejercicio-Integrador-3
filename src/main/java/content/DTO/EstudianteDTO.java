@@ -1,4 +1,4 @@
-package DTO;
+package content.DTO;
 import entities.Estudiante;
 import javax.persistence.Column;
 

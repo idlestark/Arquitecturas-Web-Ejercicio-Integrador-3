@@ -1,10 +1,10 @@
-package controllers;
-import DTO.CarreraDTO;
-import entities.Carrera;
+package content.controllers;
+import content.DTO.CarreraDTO;
+import content.entities.Carrera;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import services.CarreraService;
+import content.services.CarreraService;
 import java.util.List;
 import java.util.Optional;
 

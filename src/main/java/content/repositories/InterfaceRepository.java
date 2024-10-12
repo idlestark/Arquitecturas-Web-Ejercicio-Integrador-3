@@ -1,6 +1,7 @@
-package repositories;
+package content.repositories;
 
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
+
 import java.sql.SQLException;
 
 public interface InterfaceRepository<T> {

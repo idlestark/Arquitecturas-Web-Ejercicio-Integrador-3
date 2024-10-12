@@ -1,6 +1,6 @@
-package repositories;
-import DTO.CarreraDTO;
-import entities.Carrera;
+package content.repositories;
+import content.DTO.CarreraDTO;
+import content.entities.Carrera;
 import entities.Estudiante;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

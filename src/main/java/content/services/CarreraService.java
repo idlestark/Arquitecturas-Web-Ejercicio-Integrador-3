@@ -1,10 +1,10 @@
-package services;
-import DTO.CarreraDTO;
-import entities.Carrera;
+package content.services;
+import content.DTO.CarreraDTO;
+import content.entities.Carrera;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import repositories.CarreraRepository;
+import content.repositories.CarreraRepository;
 import java.util.List;
 import java.util.Optional;
 

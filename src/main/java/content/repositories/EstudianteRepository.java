@@ -1,5 +1,5 @@
-package repositories;
-import DTO.EstudianteDTO;
+package content.repositories;
+import content.DTO.EstudianteDTO;
 import entities.Estudiante;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
