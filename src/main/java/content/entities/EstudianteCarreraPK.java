@@ -1,6 +1,6 @@
-package entities;
+package content.entities;
+import jakarta.persistence.*;
 
-import javax.persistence.Embeddable;
 
 @Embeddable
 public class EstudianteCarreraPK implements java.io.Serializable {

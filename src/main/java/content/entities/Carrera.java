@@ -10,27 +10,27 @@ import java.util.Set;
 public class Carrera {
 
     @Id
-    private int idCarrera;
+    private long idCarrera;
 
     @Column
     private String nombre;
 
     @OneToMany(mappedBy = "carrera", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<entities.EstudianteCarrera> estudiantes;
+    private List<EstudianteCarrera> estudiantes;
 
     public Carrera() {super();}
 
-    public Carrera (int idCarrera, String nombre) {
+    public Carrera (long idCarrera, String nombre) {
         super();
         this.idCarrera = idCarrera;
         this.nombre = nombre;
-        this.estudiantes = new ArrayList<entities.EstudianteCarrera>();
+        this.estudiantes = new ArrayList<EstudianteCarrera>();
     }
 
-    public int getIdCarrera() {return this.idCarrera;}
+    public long getIdCarrera() {return this.idCarrera;}
 
     public String getNombre() {return this.nombre;}
 
-    public List<entities.EstudianteCarrera> getEstudiantes() {return this.estudiantes;}
+    public List<EstudianteCarrera> getEstudiantes() {return this.estudiantes;}
 
 }

@@ -1,63 +1,40 @@
 package content.DTO;
+import lombok.Getter;
 
+import java.util.Date;
 public class EstudianteCarreraDTO {
 
+    private Long dni;
+    private String nombre;
+    private String cNombre;
+    @Getter
+    private Date fecha;
+    private boolean egresados;
 
-        private String nombre;
-        private int anio;
-        private long inscriptos;
-        private long egresados;
+    public EstudianteCarreraDTO() {super();}
 
+    public EstudianteCarreraDTO(Long dni, String nombre, String cNombre, Date fecha, boolean egresado) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.cNombre = cNombre;
+        this.fecha = fecha;
+        this.egresados = egresado;
+    }
 
-        public EstudianteCarreraDTO() {super();}
+    public String getNombre(){ return nombre; }
 
-        public EstudianteCarreraDTO(String nombre, int anio, long inscriptos, long egresados) {
-                this.nombre = nombre;
-                this.anio = anio;
-                this.inscriptos = inscriptos;
-                this.egresados = egresados;
-        }
+    public boolean getEgresados() {
+            return egresados;
+    }
 
-        public String getNombre() {
-                return nombre;
-        }
-
-        public void setNombre(String nombre) {
-                this.nombre = nombre;
-        }
-
-
-   public int getAnio() {
-                return anio;
-        }
-         public void setAnio(int anio) {
-                this.anio = anio;
-        }
-
-        public long getInscriptos() {
-                return inscriptos;
-        }
-
-        public void setInscriptos(long inscriptos) {
-                this.inscriptos = inscriptos;
-        }
-
-        public long getEgresados() {
-                return egresados;
-        }
-
-        public void setEgresados(long egresados) {
-                this.egresados = egresados;
-        }
-
-        @Override
-        public String toString() {
-                return "EstudianteCarreraDto{" +
-                        "nombre='" + nombre + '\'' +
-                        ", anio=" + anio +
-                        ", inscriptos=" + inscriptos +
-                        ", egresados=" + egresados +
-                        '}' + "\n";
-        }
+    @Override
+    public String toString() {
+            return "EstudianteCarreraDto{" +
+                    "nombre='" + nombre + '\'' +
+                    ", nombre carrera=" + cNombre +
+                    ", fecha=" + fecha +
+                    ", egresados=" + egresados +
+                    '}' + "\n";
+    }
 
 }

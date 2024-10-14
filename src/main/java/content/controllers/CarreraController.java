@@ -18,7 +18,7 @@ public class CarreraController {
 
     //OBTENER TODAS LAS CARRERAS
     @GetMapping
-    public List<Carrera> getCarreras() { return carreraService.getCarreras(); }
+    public List<CarreraDTO> getCarreras() { return carreraService.getCarreras(); }
 
     //OBTENER UNA CARRERA POR ID
     @GetMapping("/{id}")

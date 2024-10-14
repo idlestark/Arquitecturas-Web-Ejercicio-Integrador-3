@@ -1,25 +1,24 @@
 package content.services;
 
 import content.DTO.EstudianteCarreraDTO;
-import entities.EstudianteCarrera;
-import entities.EstudianteCarreraPK;
+import content.entities.EstudianteCarrera;
+import content.entities.EstudianteCarreraPK;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import content.repositories.EstudianteCarreraRepository;
-
 import java.util.List;
 import java.util.Optional;
 
+@RequiredArgsConstructor
+@Service
 public class EstudianteCarreraService {
 
     private final EstudianteCarreraRepository estudianteCarreraRepository;
 
-    public EstudianteCarreraService(EstudianteCarreraRepository estudianteCarreraRepository) {
-        this.estudianteCarreraRepository = estudianteCarreraRepository;
-    }
-
     @Transactional(readOnly = true)
-    public List<EstudianteCarrera> getAllEstudianteCarrera() {
-        return estudianteCarreraRepository.findAll();
+    public List<EstudianteCarreraDTO> getAllEstudianteCarrera() {
+        return estudianteCarreraRepository.obtenerEstudianteCarreras();
     }
 
     @Transactional(readOnly = true)

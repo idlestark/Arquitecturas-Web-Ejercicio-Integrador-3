@@ -1,6 +1,5 @@
 package content.DTO;
-import entities.Estudiante;
-import javax.persistence.Column;
+import content.entities.Estudiante;
 
 public class EstudianteDTO {
     private String nombre;

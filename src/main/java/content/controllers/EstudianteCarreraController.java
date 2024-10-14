@@ -1,7 +1,7 @@
 package content.controllers;
 import content.DTO.EstudianteCarreraDTO;
-import conteentities.EstudianteCarrera;
-import entities.EstudianteCarreraPK;
+import content.entities.EstudianteCarrera;
+import content.entities.EstudianteCarreraPK;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +28,7 @@ public class EstudianteCarreraController {
     }
 
     @GetMapping
-    public List<EstudianteCarrera> getAllEstudianteCarrera() {
+    public List<EstudianteCarreraDTO> getAllEstudianteCarrera() {
         return estudianteCarreraService.getAllEstudianteCarrera();
     }
 

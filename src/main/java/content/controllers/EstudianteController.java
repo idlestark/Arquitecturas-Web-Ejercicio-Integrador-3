@@ -1,6 +1,6 @@
 package content.controllers;
 import content.DTO.EstudianteDTO;
-import entities.Estudiante;
+import content.entities.Estudiante;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

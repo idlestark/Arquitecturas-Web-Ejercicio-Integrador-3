@@ -1,7 +1,7 @@
 package content.services;
 import content.DTO.EstudianteDTO;
 import content.entities.Carrera;
-import entities.Estudiante;
+import content.entities.Estudiante;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import content.repositories.EstudianteRepository;
