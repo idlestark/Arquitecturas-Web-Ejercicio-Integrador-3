@@ -18,12 +18,12 @@ public class EstudianteCarreraService {
 
     @Transactional(readOnly = true)
     public List<EstudianteCarreraDTO> getAllEstudianteCarrera() {
-        return estudianteCarreraRepository.obtenerEstudianteCarreras();
+        return estudianteCarreraRepository.getAllEstudianteCarrera();
     }
 
     @Transactional(readOnly = true)
-    public Optional<EstudianteCarrera> getEstudianteCarreraById(EstudianteCarreraPK id) {
-        return estudianteCarreraRepository.findById(id);
+    public EstudianteCarreraDTO getEstudianteCarreraById(long dni, long carreraid) {
+        return estudianteCarreraRepository.getEstudianteCarreraById(dni, carreraid);
     }
 
     @Transactional

@@ -17,7 +17,7 @@ public class CarreraService {
     //OBTENER TODAS LAS CARRERAS
     @Transactional(readOnly = true)
     //public List<Carrera> getCarreras() { return carreraRepository.findAll(); }
-    public List<CarreraDTO> getCarreras() { return carreraRepository.obtenerCarreras(); }
+    public List<Carrera> getCarreras() { return carreraRepository.obtenerCarreras(); }
 
     //OBTENER UNA CARERRA POR ID
     @Transactional(readOnly = true)

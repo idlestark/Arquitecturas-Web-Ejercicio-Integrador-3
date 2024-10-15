@@ -1,5 +1,4 @@
 package content.DTO;
-import lombok.Getter;
 
 import java.util.Date;
 public class EstudianteCarreraDTO {
@@ -7,9 +6,8 @@ public class EstudianteCarreraDTO {
     private Long dni;
     private String nombre;
     private String cNombre;
-    @Getter
     private Date fecha;
-    private boolean egresados;
+    private boolean egresado;
 
     public EstudianteCarreraDTO() {super();}
 
@@ -18,13 +16,13 @@ public class EstudianteCarreraDTO {
         this.nombre = nombre;
         this.cNombre = cNombre;
         this.fecha = fecha;
-        this.egresados = egresado;
+        this.egresado = egresado;
     }
 
     public String getNombre(){ return nombre; }
 
     public boolean getEgresados() {
-            return egresados;
+            return egresado;
     }
 
     @Override
@@ -33,7 +31,7 @@ public class EstudianteCarreraDTO {
                     "nombre='" + nombre + '\'' +
                     ", nombre carrera=" + cNombre +
                     ", fecha=" + fecha +
-                    ", egresados=" + egresados +
+                    ", egresado=" + egresado +
                     '}' + "\n";
     }
 

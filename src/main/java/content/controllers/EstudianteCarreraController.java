@@ -32,11 +32,12 @@ public class EstudianteCarreraController {
         return estudianteCarreraService.getAllEstudianteCarrera();
     }
 
-    @GetMapping("/{estudianteId}/{carreraId}")
-    public ResponseEntity<EstudianteCarrera> getEstudianteCarrerabyId(@PathVariable Long estudianteDni, @PathVariable Long carreraId) {
-        EstudianteCarreraPK pk = new EstudianteCarreraPK(estudianteDni, carreraId);
-        Optional<EstudianteCarrera> estudianteCarrera = estudianteCarreraService.getEstudianteCarreraById(pk);
-        return estudianteCarrera.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    @GetMapping("/{estudianteDni}/{carreraId}")
+    public EstudianteCarreraDTO getEstudianteCarreraById(@PathVariable Long estudianteDni, @PathVariable Long carreraId) {
+        //EstudianteCarreraPK pk = new EstudianteCarreraPK(estudianteDni, carreraId);
+        EstudianteCarreraDTO estudianteCarrera = estudianteCarreraService.getEstudianteCarreraById(estudianteDni, carreraId);
+        return estudianteCarrera;
+        //return estudianteCarrera.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     //MATRICULAR UN ESTUDIANTE A UNA CARRERA (2.B)

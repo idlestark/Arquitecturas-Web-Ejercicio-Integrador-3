@@ -20,7 +20,7 @@ class CargarBase {
       return args -> {
          log.info("Loading data into the database...");
 
-         Carrera tudai = new Carrera(1, "Tecnicatura Universitaria en Desarrolo de Aplicaciones Informáticas");
+         Carrera tudai = new Carrera(1, "Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas");
          Carrera tuari = new Carrera(2, "Tecnicatura Universitaria en Administración de Redes Informáticas");
          Carrera vete = new Carrera(3, "Medicina Veterinaria");
          Carrera profesoradoInformatica = new Carrera(4, "Profesorado de Informática");
@@ -35,6 +35,7 @@ class CargarBase {
 
          log.info("Preloading " + estudianteRepository.save(es1));
          log.info("Preloading " + estudianteRepository.save(es2));
+
 
          EstudianteCarreraPK pk1 = new EstudianteCarreraPK(es1.getDni(), tudai.getIdCarrera());
          EstudianteCarrera estudianteCarrera1 = new EstudianteCarrera(pk1, es1, tudai, Date.valueOf("2024-05-10"), true);

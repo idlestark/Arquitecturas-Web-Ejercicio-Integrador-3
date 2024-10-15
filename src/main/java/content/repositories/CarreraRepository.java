@@ -19,8 +19,8 @@ public interface CarreraRepository extends JpaRepository<Carrera, Long> {
             "ORDER BY COUNT(e.dni) DESC")
     List<CarreraDTO> obtenerCarrerasConInscriptos();
 
-    @Query("SELECT new content.DTO.CarreraDTO(c.nombre, c.idCarrera) " +
+    @Query("SELECT new content.entities.Carrera(c.idCarrera, c.nombre) " +
             "FROM Carrera c")
-    List<CarreraDTO> obtenerCarreras();
+    List<Carrera> obtenerCarreras();
 
 }
