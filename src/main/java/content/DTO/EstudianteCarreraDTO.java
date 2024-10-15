@@ -19,10 +19,25 @@ public class EstudianteCarreraDTO {
         this.egresado = egresado;
     }
 
-    public String getNombre(){ return nombre; }
 
-    public boolean getEgresados() {
-            return egresado;
+    public Long getDni() {
+        return dni;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getcNombre() {
+        return cNombre;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public boolean isEgresado() {
+        return egresado;
     }
 
     @Override

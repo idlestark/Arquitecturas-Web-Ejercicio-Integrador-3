@@ -6,22 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="759da536-a6af-4140-8139-f7e03b14c37a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/DTO/EstudianteCarreraDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/DTO/EstudianteCarreraDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/controllers/CarreraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/controllers/CarreraController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/controllers/EstudianteCarreraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/controllers/EstudianteCarreraController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/repositories/CarreraRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/repositories/CarreraRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/repositories/EstudianteCarreraRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/repositories/EstudianteCarreraRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/services/CarreraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/services/CarreraService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/services/EstudianteCarreraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/services/EstudianteCarreraService.java" afterDir="false" />
-    </list>
-    <list id="39396231-d978-4ee1-818d-49124b99d356" name="Changes by ibarr" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/DTO/EstudianteCarreraDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/DTO/EstudianteCarreraDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/content/utils/CargarBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/utils/CargarBase.java" afterDir="false" />
     </list>
     <list id="41f2d004-73ef-4362-8899-4ef79df4deb7" name="Changes by nacho" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/repositories/CarreraRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/repositories/CarreraRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/repositories/EstudianteCarreraRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/repositories/EstudianteCarreraRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/services/EstudianteCarreraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/services/EstudianteCarreraService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/utils/CargarBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/utils/CargarBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/content/DTO/EstudianteCarreraDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/DTO/EstudianteCarreraDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,38 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/content/services/EstudianteCarreraService.java">
-      <ranges>
-        <range start1="20" end1="21" start2="20" end2="21" changelist="759da536-a6af-4140-8139-f7e03b14c37a" />
-        <range start1="24" end1="26" start2="24" end2="26" changelist="41f2d004-73ef-4362-8899-4ef79df4deb7" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/content/repositories/EstudianteCarreraRepository.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="2" changelist="41f2d004-73ef-4362-8899-4ef79df4deb7" />
-        <range start1="12" end1="13" start2="13" end2="14" changelist="759da536-a6af-4140-8139-f7e03b14c37a" />
-        <range start1="24" end1="25" start2="25" end2="26" changelist="759da536-a6af-4140-8139-f7e03b14c37a" />
-        <range start1="26" end1="26" start2="27" end2="33" changelist="759da536-a6af-4140-8139-f7e03b14c37a" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/content/repositories/CarreraRepository.java">
-      <ranges>
-        <range start1="21" end1="22" start2="21" end2="22" changelist="41f2d004-73ef-4362-8899-4ef79df4deb7" />
-        <range start1="23" end1="24" start2="23" end2="24" changelist="759da536-a6af-4140-8139-f7e03b14c37a" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/content/DTO/EstudianteCarreraDTO.java">
-      <ranges>
-        <range start1="1" end1="2" start2="1" end2="1" changelist="39396231-d978-4ee1-818d-49124b99d356" />
-        <range start1="9" end1="10" start2="8" end2="8" changelist="39396231-d978-4ee1-818d-49124b99d356" />
-        <range start1="11" end1="12" start2="9" end2="10" changelist="759da536-a6af-4140-8139-f7e03b14c37a" />
-        <range start1="20" end1="21" start2="18" end2="19" changelist="759da536-a6af-4140-8139-f7e03b14c37a" />
-        <range start1="26" end1="27" start2="24" end2="25" changelist="39396231-d978-4ee1-818d-49124b99d356" />
-        <range start1="35" end1="36" start2="33" end2="34" changelist="39396231-d978-4ee1-818d-49124b99d356" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -140,6 +96,7 @@
       <workItem from="1728925689778" duration="10823000" />
       <workItem from="1729019886096" duration="1644000" />
       <workItem from="1729021701642" duration="4317000" />
+      <workItem from="1729031550037" duration="3248000" />
     </task>
     <servers />
   </component>
