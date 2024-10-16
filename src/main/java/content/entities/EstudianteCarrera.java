@@ -20,9 +20,9 @@ public class EstudianteCarrera {
     private Date fechaInscripto;
 
     @Column
-    private boolean egresado;
+    private Boolean egresado;
 
-    public EstudianteCarrera (EstudianteCarreraPK id, Estudiante estudiante, Carrera carrera, Date fechaInscripto, boolean egresado) {
+    public EstudianteCarrera (EstudianteCarreraPK id, Estudiante estudiante, Carrera carrera, Date fechaInscripto, Boolean egresado) {
         super();
         this.id = id;
         this.estudiante = estudiante;
@@ -51,7 +51,7 @@ public class EstudianteCarrera {
         return fechaInscripto;
     }
 
-    public boolean isEgresado() {
+    public Boolean isEgresado() {
         return egresado;
     }
 }

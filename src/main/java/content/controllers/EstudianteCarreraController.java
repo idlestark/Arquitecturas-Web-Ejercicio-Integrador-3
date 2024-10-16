@@ -24,7 +24,7 @@ public class EstudianteCarreraController {
         public Long estudianteDni;
         public Long carreraId;
         public Date fechaInscripcion;
-        public boolean estaGraduado;
+        public Boolean estaGraduado;
     }
 
     @GetMapping

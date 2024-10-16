@@ -11,15 +11,13 @@ import java.util.List;
 @Repository
 public interface EstudianteCarreraRepository extends JpaRepository<EstudianteCarrera, EstudianteCarreraPK> {
 
-    @Query("SELECT new content.DTO.EstudianteCarreraDTO(e.dni ,e.nombre, c.nombre, ec.fechaInscripto, ec.egresado), " +
-            "COUNT(ec.estudiante.dni), " +
-            "SUM(CASE WHEN ec.egresado = TRUE THEN 1 ELSE 0 END) " +
+    @Query("SELECT new content.DTO.EstudianteCarreraDTO(c.nombre, COUNT(ec.estudiante.dni)) " +
             "FROM EstudianteCarrera ec " +
             "JOIN ec.carrera c " +
-            "JOIN ec.estudiante e " +
-            "GROUP BY c.nombre, YEAR(ec.fechaInscripto) " +
-            "ORDER BY YEAR(ec.fechaInscripto) ASC")
+            "GROUP BY c.nombre " +
+            "ORDER BY c.nombre ASC")
     List<EstudianteCarreraDTO> generarReporte();
+
 
     @Query("SELECT new content.DTO.EstudianteCarreraDTO(ec.estudiante.dni, ec.estudiante.nombre, ec.carrera.nombre, ec.fechaInscripto, ec.egresado) " +
             "FROM EstudianteCarrera ec")

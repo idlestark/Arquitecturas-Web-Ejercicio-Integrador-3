@@ -66,7 +66,7 @@ class CargarBase {
          EstudianteCarreraPK pk5 = new EstudianteCarreraPK(es5.getDni(), profesoradoMatematica.getIdCarrera());
          EstudianteCarrera estudianteCarrera5 = new EstudianteCarrera(pk5, es5, profesoradoMatematica, Date.valueOf("2020-03-25"), false);
 
-         EstudianteCarreraPK pk6 = new EstudianteCarreraPK(es3.getDni(), profesoradoMatematica.getIdCarrera());
+         EstudianteCarreraPK pk6 = new EstudianteCarreraPK(es6.getDni(), profesoradoMatematica.getIdCarrera());
          EstudianteCarrera estudianteCarrera6 = new EstudianteCarrera(pk6, es6, profesoradoMatematica, Date.valueOf("2012-10-01"), true);
 
 
